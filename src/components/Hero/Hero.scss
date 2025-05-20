@@ -1,0 +1,177 @@
+.Hero {
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    position: relative;
+
+    .wrapper {
+        max-width: 1366px;
+        height: 100%;
+        margin: auto;
+        padding: 0 30px;
+
+        .textContainer {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+
+            h2 {
+                font-size: 32px;
+                background: linear-gradient(45deg, #00F2FE, #4FACFE);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                letter-spacing: 2px;
+            }
+
+            h1 {
+                font-size: 60px;
+                font-weight: bold;
+                color: white;
+                line-height: 1.2;
+            }
+
+            .bio {
+                font-size: 18px;
+                color: #e0e0e0;
+                line-height: 1.6;
+                max-width: 600px;
+                margin: 20px 0;
+
+
+            }
+
+            .scroll-indicator {
+                position: relative;
+                width: 30px;
+                height: 60px;
+                margin: 40px auto 0;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                padding-top: 8px;
+
+                .scroll-dot {
+                    width: 8px;
+                    height: 8px;
+                    background: #4FACFE;
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px rgba(79, 172, 254, 0.5);
+                }
+            }
+
+            .computer-canvas {
+                position: relative;
+                width: 100%;
+                height: 400px;
+                margin: 20px 0;
+                border-radius: 10px;
+                overflow: hidden;
+                background: rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+                canvas {
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
+
+            .social-links {
+                display: flex;
+                gap: 20px;
+                margin-top: 10px;
+
+                a {
+                    color: white;
+                    font-size: 24px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: #4FACFE;
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+
+            .button {
+                display: flex;
+                gap: 20px;
+                margin-top: 20px;
+
+                button {
+                    padding: 15px 30px;
+                    border: 2px solid #4FACFE;
+                    border-radius: 8px;
+                    background-color: transparent;
+                    color: white;
+                    cursor: pointer;
+                    font-weight: 500;
+                    font-size: 16px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: #4FACFE;
+                        transform: translateY(-2px);
+                    }
+
+                    &:first-child {
+                        background-color: #4FACFE;
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .wrapper {
+            .textContainer {
+                width: 100%;
+                padding: 20px;
+                text-align: center;
+                align-items: center;
+
+                h1 {
+                    font-size: 40px;
+                }
+
+                .bio {
+                    font-size: 16px;
+                }
+
+                .button {
+                    flex-direction: column;
+                    width: 100%;
+                    max-width: 300px;
+
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .imageContainer {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .slidingTextContainer {
+        position: absolute;
+        font-size: 50vh;
+        bottom: -120px;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.03);
+        width: 50%;
+        font-weight: bold;
+    }
+}

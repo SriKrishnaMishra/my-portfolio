@@ -1,0 +1,121 @@
+.simple-computer-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(12, 12, 29, 0.8);
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.simple-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: white;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(79, 172, 254, 0.3);
+  border-top: 4px solid #4FACFE;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.progress {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4FACFE;
+  margin-top: 10px;
+}
+
+.loading-text {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #e0e0e0;
+}
+
+.webgl-error {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #0c0c1d, #111132);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.webgl-error h3 {
+  color: #4FACFE;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.webgl-error p {
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  max-width: 80%;
+}
+
+.fallback-image {
+  width: 80%;
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.fallback-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .simple-computer-container {
+    height: 300px;
+  }
+  
+  .webgl-error {
+    height: 300px;
+  }
+  
+  .webgl-error h3 {
+    font-size: 20px;
+  }
+  
+  .fallback-image {
+    max-width: 200px;
+  }
+}

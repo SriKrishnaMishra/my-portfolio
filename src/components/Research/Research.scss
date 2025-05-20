@@ -1,0 +1,114 @@
+.research {
+    padding: 100px 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #0c0c1d 0%, #1a1a2f 100%);
+
+    .section-title {
+        font-size: 3rem;
+        margin-bottom: 50px;
+        background: linear-gradient(45deg, #00F2FE, #4FACFE);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+
+    .papers-container {
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .paper-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05));
+            pointer-events: none;
+        }
+
+        .paper-year {
+            font-size: 0.9rem;
+            color: #4FACFE;
+            margin-bottom: 15px;
+        }
+
+        .paper-title {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .paper-abstract {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .paper-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            .tag {
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                background: rgba(79, 172, 254, 0.1);
+                color: #4FACFE;
+                border: 1px solid rgba(79, 172, 254, 0.3);
+            }
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #00F2FE, #4FACFE);
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 242, 254, 0.2);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .research {
+        padding: 60px 20px;
+
+        .section-title {
+            font-size: 2.5rem;
+        }
+
+        .papers-container {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.canvas-computer-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0c0c1d 0%, #111132 100%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  // Canvas element
+  .canvas-element {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    
+    &.loaded {
+      opacity: 1;
+    }
+  }
+  
+  // Loader
+  .canvas-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(12, 12, 29, 0.9);
+    z-index: 10;
+    
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(79, 172, 254, 0.3);
+      border-top: 4px solid #4FACFE;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 15px;
+    }
+    
+    p {
+      color: #e0e0e0;
+      font-size: 14px;
+    }
+  }
+}
+
+// Fallback content when Canvas is not supported
+.canvas-fallback {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0c0c1d 0%, #111132 100%);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  
+  .content {
+    text-align: center;
+    
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #00F2FE, #4FACFE);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    
+    h3 {
+      color: #ffffff;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+    }
+  }
+}
+
+// Animation for the spinner
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Responsive adjustments
+@media screen and (max-width: 768px) {
+  .canvas-computer-container,
+  .canvas-fallback {
+    height: 350px;
+  }
+  
+  .canvas-fallback .content {
+    .logo {
+      font-size: 40px;
+    }
+    
+    h3 {
+      font-size: 20px;
+    }
+  }
+}

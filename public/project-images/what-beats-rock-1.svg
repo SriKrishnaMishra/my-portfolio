@@ -1,0 +1,38 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  
+  <!-- Background elements -->
+  <circle cx="400" cy="200" r="180" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
+  <circle cx="400" cy="200" r="150" fill="#0f3460" stroke="#e94560" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Game elements -->
+  <g transform="translate(250, 200)">
+    <circle cx="0" cy="0" r="60" fill="#16213e" stroke="#e94560" stroke-width="2"/>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Rock</text>
+  </g>
+  
+  <g transform="translate(400, 120)">
+    <circle cx="0" cy="0" r="60" fill="#16213e" stroke="#4facfe" stroke-width="2"/>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Paper</text>
+  </g>
+  
+  <g transform="translate(550, 200)">
+    <circle cx="0" cy="0" r="60" fill="#16213e" stroke="#00f2fe" stroke-width="2"/>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Scissors</text>
+  </g>
+  
+  <!-- Connecting lines -->
+  <line x1="300" y1="180" x2="350" y2="140" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="450" y1="140" x2="500" y2="180" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="290" y1="240" x2="510" y2="240" stroke="#ffffff" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- AI element -->
+  <g transform="translate(400, 280)">
+    <rect x="-80" y="-30" width="160" height="60" rx="10" fill="#e94560" opacity="0.8"/>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">AI Logic</text>
+  </g>
+  
+  <!-- Project title -->
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">What Beats Rock Game</text>
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="16" fill="#4facfe" text-anchor="middle">AI-Powered Game Logic</text>
+</svg>
